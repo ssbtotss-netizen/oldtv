@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اشتراك VIP — old.tv</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Lalezar&display=swap">
+<link rel="stylesheet" href="/style.css">
+<!-- Moyasar payment form — check docs.moyasar.com for the latest version number -->
+<link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.15.0/moyasar.css">
+<script src="https://cdn.moyasar.com/mpf/1.15.0/moyasar.js"></script>
+</head>
+<body>
+<header class="top">
+  <a href="/" class="logo" aria-label="old.tv الرئيسية">
+    <svg width="34" height="30" viewBox="0 0 36 32" fill="none" stroke="#F0A03C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="32" height="22" rx="5"/><path d="M12 2l6 6 6-6"/><circle cx="28" cy="15" r="1.4"/><circle cx="28" cy="21" r="1.4"/></svg>
+    <span dir="ltr">old<b>.tv</b></span>
+  </a>
+</header>
+
+<main class="pay-wrap">
+  <h1>اشتراك <span dir="ltr" style="color:#F0A03C;font-family:'Bungee',sans-serif">VIP</span></h1>
+  <p class="muted" style="margin:0">
+    <strong style="color:#F3EBDD" id="price">10$</strong> لمدة <span id="days">30</span> يوم —
+    فلتر الجنس، فلتر الدولة، أولوية في المطابقة، وشارة VIP.
+    الاشتراك ما يتجدد تلقائياً، وإذا جددت قبل ما ينتهي ينضاف الشهر على المدة الباقية.
+  </p>
+  <p class="err" id="err" role="alert"></p>
+  <div id="demoBox" hidden style="border:1px dashed #F0A03C;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px">
+    <strong>وضع التجربة</strong>
+    <span class="muted">فعّل VIP مجاناً ليوم واحد عشان تجرب المزايا.</span>
+    <button type="button" class="btn-primary" id="demoBtn" style="font-size:22px;min-height:52px">فعّل VIP تجريبي</button>
+  </div>
+  <div class="pay-card"><div class="mysr-form"></div></div>
+  <p class="muted" style="font-size:14px;margin:0">الدفع يتم عن طريق بوابة ميسّر الآمنة. ما نحفظ بيانات بطاقتك.</p>
+  <form action="/vip-done.html" method="get" style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #3A3128;padding-top:20px">
+    <label for="restoreId" style="font-weight:600">مشترك من جهاز ثاني؟ أدخل رقم العملية</label>
+    <div style="display:flex;gap:8px">
+      <input id="restoreId" name="id" required pattern="[0-9a-fA-F\-]{36}" dir="ltr" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" style="flex:1;min-width:0;min-height:46px;background:#14110E;color:#F3EBDD;border:1px solid #3A3128;border-radius:12px;padding:0 12px">
+      <button type="submit" class="btn-ghost" style="min-height:46px;font-size:18px;padding:0 18px">استعادة</button>
+    </div>
+  </form>
+  <a href="/">رجوع للرئيسية</a>
+</main>
+
+<script src="/vip.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Render Blueprint — test deployment of old.tv
+# DEMO_VIP=1 gives free test VIP. Remove it before the real launch.
+services:
+  - type: web
+    name: oldtv
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DEMO_VIP
+        value: "1"
+      - key: VIP_SECRET
+        generateValue: true
