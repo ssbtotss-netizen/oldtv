@@ -118,3 +118,5 @@ select:disabled{opacity:.55;cursor:pointer}
 .discord-cta{display:inline-flex;align-items:center;justify-content:center;padding:0 28px;text-decoration:none;font-size:24px}
 .discord-cta:hover{color:var(--bg)}
 @media (max-width:700px){.discord-box{margin:0 16px 40px}.discord-link span{display:none}}
+.discord-box .server-tag{margin:4px 0 8px;color:var(--muted);font-size:15px}
+.discord-box .server-tag b{display:inline-block;font-family:'Bungee',sans-serif;font-weight:400;color:var(--accent);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:0 10px;margin-inline-start:4px;letter-spacing:1px}
